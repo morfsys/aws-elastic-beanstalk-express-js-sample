@@ -1,0 +1,9 @@
+name: first
+on: [push]
+jobs:
+  first-job:
+    name: First Job name
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+      - uses: actions/checkout@v2
