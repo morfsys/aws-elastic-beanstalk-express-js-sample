@@ -1,9 +1,14 @@
 name: first
 on: [push]
 jobs:
-  first-job:
-    name: First Job name
+  checkout:
+    name: Checkout code
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
+  install-node-modules:
+    name: Install Node modules
+    steps:
+      - name: Install npm
+        run: npm install
